@@ -1,6 +1,6 @@
 import socket
 
-server_address = ('127.0.0.1', 2900)
+server_address = ('127.0.0.1', 2901)
 
 
 def client_program():
@@ -16,11 +16,11 @@ def client_program():
         message = ""
 
         while message != "exit":
-            message = input("Enter message: ")
+            message = input("Enter your message: ")
 
-            my_socket.send(message.encode(''))
+            my_socket.send(message.encode())
 
-            server_answer = my_socket.recv(1024).decode('')
+            server_answer = my_socket.recv(1024).decode()
 
             print(server_answer)
 

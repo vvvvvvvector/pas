@@ -1,7 +1,20 @@
 import socket
 
 host = "127.0.0.1"
-port = 2901
+port = 2910
+
+
+def check_answer(data_decoded):
+    data_array = data_decoded.split(";")
+
+    try:
+        if data_array[2] == "60788" and data_array[4] == "2901" and data_array[6] == "programming in python is fun":
+            return "TAK"
+        else:
+            return "NIE"
+
+    except IndexError:
+        return "BAD SYNTAX"
 
 
 def server_program():
@@ -17,7 +30,9 @@ def server_program():
         if not data:
             break
 
-        server_socket.sendto(data, client_address)
+        result = check_answer(data.decode())
+
+        server_socket.sendto(result.encode(), client_address)
 
     server_socket.close()
 

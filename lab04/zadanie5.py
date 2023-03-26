@@ -17,7 +17,17 @@ def server_program():
         if not data:
             break
 
-        server_socket.sendto(data, client_address)
+        ip_address = data.decode()
+
+        answer = ""
+
+        try:
+            answer = f"Hostname for the {ip_address} is: {socket.gethostbyaddr(ip_address)[0]}"
+
+        except socket.herror:
+            answer = f"Hostname for the {ip_address} is not found"
+
+        server_socket.sendto(answer.encode(), client_address)
 
     server_socket.close()
 
