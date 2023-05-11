@@ -1,0 +1,24 @@
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "comments": "hello!", 
+    "custemail": "viktar@mail.gg", 
+    "custname": "viktar", 
+    "custtel": "12345678", 
+    "delivery": "fffff", 
+    "size": "large", 
+    "topping": "onion"
+  }, 
+  "headers": {
+    "Content-Length": "114", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15", 
+    "X-Amzn-Trace-Id": "Root=1-645d529f-7f5d5d055167664c5667a2b2"
+  }, 
+  "json": null, 
+  "origin": "87.246.193.29", 
+  "url": "http://httpbin.org/post"
+}
