@@ -17,6 +17,7 @@ def client_program():
 
         while data != "exit":
             data = input("Enter data to send to the server: ")
+            # data = input()
             my_socket.send(data.encode('utf-8'))
 
             server_answer = my_socket.recv(1024).decode('utf-8')
